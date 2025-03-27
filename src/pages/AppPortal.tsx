@@ -2,7 +2,7 @@
 import React from 'react';
 import Navbar from '@/components/ui-custom/Navbar';
 import { Button } from '@/components/ui/button';
-import { Calendar, Clock, Database, FileText, FolderSearch, Grid3X3, HardHat, History, ListChecks, PlaneTakeoff, PlusCircle, RefreshCw, Scale, Search, Settings, Users } from 'lucide-react';
+import { Calendar, Clock, Database, FileText, FolderSearch, Grid3X3, HardHat, History, ListChecks, PlaneTakeoff, PlusCircle, RefreshCw, Scale, Search, Settings, Users, BookOpen } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Input } from '@/components/ui/input';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -233,7 +233,7 @@ const AppPortal = () => {
           <h2 className="text-2xl font-bold text-lpms-blue mb-6">Quick Access</h2>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {['Project Calendar', 'User Settings', 'Help Center', 'Admin Panel'].map((item, index) => (
+            {['Project Calendar', 'User Settings', 'User Guideline/User Manual', 'Admin Panel'].map((item, index) => (
               <div 
                 key={index} 
                 className="glassmorphism rounded-xl p-4 flex items-center space-x-3 cursor-pointer portal-card-hover"
@@ -251,7 +251,7 @@ const AppPortal = () => {
                 )}>
                   {index === 0 ? <Calendar className="h-5 w-5" /> : 
                    index === 1 ? <Settings className="h-5 w-5" /> : 
-                   index === 2 ? <FolderSearch className="h-5 w-5" /> : 
+                   index === 2 ? <BookOpen className="h-5 w-5" /> : 
                    <Users className="h-5 w-5" />}
                 </div>
                 <span className="font-medium text-lpms-blue">{item}</span>
